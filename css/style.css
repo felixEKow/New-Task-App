@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
 :root{
-  --primary-color: chocolate; 
+  --primary-color: crimson; 
   --work-color: #3a82ee;
   --personal-color: #f43f5e ;
   --light-color: #eee;
-  --danger-color: crimson;
+  --danger-color: red;
   --dark-color: #313154;
   --grey-color: rgb(94, 90, 90);
 
@@ -25,9 +25,9 @@
 body::before{
   background-image: linear-gradient(
     98deg,
-    rgba(35, 168, 86, 0.671),
-    rgba(177, 248, 204, 0.651)
-  ), url('../images/clay-banks-cEzMOp5FtV4-unsplash.jpg');
+    rgba(238, 243, 230, 0.671),
+    rgba(153, 241, 179, 0.651)
+  ), url('../images/kelly-sikkema-6aY-6B3MiZ4-unsplash.jpg');
     content: '';
     position: fixed;
     top: 0;
@@ -173,7 +173,14 @@ input:checked ~ .bubble::after{
   padding: 1rem 1.5rem;
   color: beige;
   background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  box-shadow: var(--personal-shadow);
+  font-weight: bolder;
 }
+
+
+
+
   
 
 
