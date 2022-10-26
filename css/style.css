@@ -47,6 +47,13 @@ input:not([type="radio"]):not([type="checkbox"]), button {
   cursor: initial;
 }
 
+.nameInput{
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: initial;
+}
+
 body{
   color: var(--dark-color);
 }
@@ -207,6 +214,7 @@ input:checked ~ .bubble::after{
 .taskItem .taskContent input{
   color: var(--dark-color);
   font-size: 1.125rem;
+  margin-right: -18px;
 }
 
 .taskItem .actionButtons {
@@ -219,7 +227,42 @@ input:checked ~ .bubble::after{
   padding: 0.5rem;
   border-radius: 0.25rem;
   color: beige;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
+
+.taskItem .actionButtons button:hover{
+  opacity: 0.75;
+}
+
+.taskItem .actionButtons .editBtn{
+  margin-right: 0.5rem;
+  background-color: teal;
+}
+
+.taskItem .actionButtons .deleteBtn{
+  margin-right: 0.5rem;
+  background-color: var(--danger-color);
+}
+
+.taskItem.done .taskContent input{
+  text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
