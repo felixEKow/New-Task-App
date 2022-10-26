@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
 :root{
-  --primary-color: #ea40a4; 
+  --primary-color: chocolate; 
   --work-color: #3a82ee;
   --personal-color: #f43f5e ;
   --light-color: #eee;
@@ -154,6 +154,27 @@ input[type="radio"],input[type="checkbox"]{
   box-shadow: var(--personal-shadow);
 }
 
+input:checked ~ .bubble::after{
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.addTodo .categories label div {
+  color: var(--dark-color);
+  font-size: 1.125rem;
+  margin-top: 1rem;
+}
+
+.addTodo input[type="submit"]{
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  color: beige;
+  background-color: var(--primary-color);
+}
+  
 
 
 
