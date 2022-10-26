@@ -176,7 +176,52 @@ input:checked ~ .bubble::after{
   border-radius: 0.5rem;
   box-shadow: var(--personal-shadow);
   font-weight: bolder;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
+
+.addTodo input[type="submit"]:hover{
+  opacity: 0.75;
+}
+
+.taskList .taskItem{
+  display: flex;
+  align-items: center;
+  background-color: beige;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.taskItem label{
+  display: block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.taskItem .taskContent{
+  flex: 1 1 0%;
+}
+
+.taskItem .taskContent input{
+  color: var(--dark-color);
+  font-size: 1.125rem;
+}
+
+.taskItem .actionButtons {
+  display: flex;
+  align-items: center;
+}
+
+.taskItem .actionButtons button{
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: beige;
+}
+
+
 
 
 
