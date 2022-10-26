@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="" />
+  <title>To-do</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <main class="todoApp">
+
+    <section class="userGreeting">
+      <h2 class="greetingTitle">
+        Hi there, <input type="text" id="name" placeholder="enter name">
+      </h2>
+    </section>
+
+    <section class="addTodo">
+      <h3>ADD A NEW TASK</h3>
+
+      <form id="newTodoForm">
+        <h4>What are your priorities?</h4>
+        <input type="text" name="content" id="content" placeholder="e.g buy kooko">
+        <h4>Pick a Category</h4>
+        <div class="categories">
+
+          <label>
+            <input type="radio" name="category" id="workCategory" value="work">
+            <span class="category work"></span>
+            <div>Work</div>
+          </label>
+
+          <label>
+            <input type="radio" name="category" id="personalCategory" value="prsonal">
+            <span class="category personal"></span>
+            <div>Personal</div>
+          </label>
+
+        </div>
+
+        <input type="submit" value="Add Task">
+        
+      </form>
+    </section>
+
+    <section class="taskList">
+      <h3>TODO LIST</h3>
+      <div class="taskList" id="taskList">
+        <div class="taskItem">
+          <label>
+            <input type="checkbox"/>
+            <span class="category work"></span>
+          </label>
+
+          <div class="taskContent">
+            <input type="text" value="check calendar" readonly/>
+          </div>
+
+          <div class="actionButtons">
+            <button class="editBtn">Edit</button>
+            <button class="deleteBtn">Delete</button>
+          </div>
+
+        </div>
+
+        <div class="taskItem">
+          <label>
+            <input type="checkbox"/>
+            <span class="category personal"></span>
+          </label>
+
+          <div class="taskContent">
+            <input type="text" value="do something.." readonly/>
+          </div>
+
+          <div class="actionButtons">
+            <button class="editBtn">Edit</button>
+            <button class="deleteBtn">Delete</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- MDB -->
+  <script type="text/javascript" src="./js/sript.js"></script>
+</body>
+
+</html>

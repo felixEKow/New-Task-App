@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+:root{
+  --primary-color: #ea40a4; 
+  --work-color: #3a82ee;
+  --personal-color: #f43f5e ;
+  --light-color: #eee;
+  --danger-color: crimson;
+  --dark-color: #313154;
+  --grey-color: rgb(94, 90, 90);
+
+  --shadow: 0 1px 3px rgba(9, 9, 4, 0.1);
+
+  --work-shadow: 0 0px 4px rgba(58, 130, 238, 0.75);
+  --personal-shadow: 0 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Epilogue', sans-serif;
+}
+
+body::before{
+  background-image: linear-gradient(
+    98deg,
+    rgba(35, 168, 86, 0.671),
+    rgba(177, 248, 204, 0.651)
+  ), url('../images/clay-banks-cEzMOp5FtV4-unsplash.jpg');
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button {
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: initial;
+}
+
+body{
+  color: var(--dark-color);
+}
+
+section{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h3 {
+  color: var(--dark-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+h4{
+   color: var(--grey-color);
+}
+
+.userGreeting .greetingTitle{
+  display: flex;
+}
+
+.userGreeting .greetingTitle input{
+  margin-left: 0.5rem;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.userGreeting .greetingTitle,
+.userGreeting .greetingTitle input{
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.addTodo input[type="text"]{
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  color: var(--dark-color);
+  background-color: beige;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.addTodo .categories{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.addTodo .categories label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: beige;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;  
+}
+
+input[type="radio"],input[type="checkbox"]{
+  display: none;
+}
+
+.category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--work-color);
+  box-shadow: var(--work-shadow);
+}
+
+.category.personal{
+  border-color: var(--personal-color);
+  box-shadow: var(--personal-shadow);
+}
+
+.category::after{
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: var(--work-color);
+  box-shadow: var(--work-shadow);
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.category.personal::after{
+  background-color: var(--personal-color);
+  box-shadow: var(--personal-shadow);
+}
+
+
+
+
+
+
+
+
+
