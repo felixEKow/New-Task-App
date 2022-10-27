@@ -40,7 +40,7 @@ function renderTasks (){
         const label = document.createElement("label");
         const input = document.createElement("input");
         const span = document.createElement("span");
-        const content = document.createElement("div");
+        const taskContent = document.createElement("div");
         const actionsBtns = document.createElement("div");
         const editButton = document.createElement("button");
         const remove = document.createElement("button");
@@ -55,12 +55,12 @@ function renderTasks (){
             span.classList.add("work")
         }
 
-        content.classList.add("taskContent");
+        taskContent.classList.add("taskContent");
         actionsBtns.classList.add("actionButtons");
         editButton.classList.add("editBtn");
         remove.classList.add("deleteBtn");
 
-        content.innerHTML = `<input type="text" value"${task.content}" readonly>`;
+        taskContent.innerHTML = `<input type="text" value"${task .content}" readonly>`;
         editButton.innerHTML = "Edit";
         remove.innerHTML = "Delete";
 
@@ -69,10 +69,44 @@ function renderTasks (){
         actionsBtns.appendChild(editButton);
         actionsBtns.appendChild(remove);
         taskItem.appendChild(label);
-        taskItem.appendChild(content);
+        taskItem.appendChild(taskContent);
         taskItem.appendChild(actionsBtns);
         
         taskList.appendChild(taskItem);
 
+        if(task.done){
+            taskItem.classList.add("done");
+        }
+
+        input.addEventListener("click", (e) => {
+            task.done = e.target.checked;
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+
+            if(task.done){
+                taskItem.classList.add("done");
+            } else{
+                taskItem.classList.remove("done")
+            }
+
+            renderTasks();
+        })
+
+        editButton.addEventListener("click", (e) => {
+            const input = content.querySelector("input");
+            input.removeAttribute("readonly");
+            input.focus();
+            input.addEventListener("blur", (e) => {
+                input.setAttribute("readonly", true);
+                task.content = e.target.value;
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                renderTasks();
+            })
+
+            remove.addEventListener("click", (e) => {
+                tasks = tasks.filter((t) => t != task);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                renderTasks();
+            })
+        })
     })
 }
