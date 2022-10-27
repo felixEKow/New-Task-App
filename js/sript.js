@@ -34,6 +34,10 @@ function renderTasks (){
     const taskList = document.querySelector("#taskList");
     taskList.innerHTML = "";
     tasks.forEach(task => {
-        
+        const taskItem = document.createElement("div");
+        taskItem.classList.add("taskItem");
+
+        const label = document.createElement("label");
+        const input = document.createElement("input");
     })
 }
