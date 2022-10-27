@@ -10,4 +10,14 @@ window.addEventListener("load",() => {
     nameInput.addEventListener("change", (e) => {
         localStorage.setItem("username", e.target.value);
     })
+
+    taskForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const task = {
+            content: e.target.elements.content.value,
+            category: e.target.elements.category.value,
+            done: false,
+            timeCreated: new Date().getTime()
+        }
+    })
 })
