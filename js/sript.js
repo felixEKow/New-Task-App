@@ -19,5 +19,9 @@ window.addEventListener("load",() => {
             done: false,
             timeCreated: new Date().getTime()
         }
+
+        tasks.push(task);
+        localStorage.setItem("todos", JSON.stringify(tasks))
+        e.target.reset();
     })
 })
