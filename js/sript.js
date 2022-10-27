@@ -41,18 +41,38 @@ function renderTasks (){
         const input = document.createElement("input");
         const span = document.createElement("span");
         const content = document.createElement("div");
-        const actions = document.createElement("div");
+        const actionsBtns = document.createElement("div");
         const editButton = document.createElement("button");
         const remove = document.createElement("button");
 
         input.type = "checkbox";
-        input.checked = todo.done;
+        input.checked = task.done;
         span.classList.add("category");
 
-        if(todo.category == "personal"){
+        if(task.category == "personal"){
             span.classList.add("personal");
         } else {
             span.classList.add("work")
         }
+
+        content.classList.add("taskContent");
+        actionsBtns.classList.add("actionButtons");
+        editButton.classList.add("editBtn");
+        remove.classList.add("deleteBtn");
+
+        content.innerHTML = `<input type="text" value"${task.content}" readonly>`;
+        editButton.innerHTML = "Edit";
+        remove.innerHTML = "Delete";
+
+        label.appendChild(input);
+        label.appendChild(span);
+        actionsBtns.appendChild(editButton);
+        actionsBtns.appendChild(remove);
+        taskItem.appendChild(label);
+        taskItem.appendChild(content);
+        taskItem.appendChild(actionsBtns);
+        
+        taskList.appendChild(taskItem);
+
     })
 }
