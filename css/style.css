@@ -199,6 +199,7 @@ input:checked ~ .bubble::after{
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
+  
 }
 
 .taskItem label{
