@@ -23,5 +23,17 @@ window.addEventListener("load",() => {
         tasks.push(task);
         localStorage.setItem("todos", JSON.stringify(tasks))
         e.target.reset();
+        renderTasks();
     })
+
+    renderTasks();
 })
+
+
+function renderTasks (){
+    const taskList = document.querySelector("#taskList");
+    taskList.innerHTML = "";
+    tasks.forEach(task => {
+        
+    })
+}
