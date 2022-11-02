@@ -26,7 +26,7 @@ window.addEventListener("load",() => {
         renderTasks();
     })
 
-    renderTasks();s
+    renderTasks();
 })
 
 
